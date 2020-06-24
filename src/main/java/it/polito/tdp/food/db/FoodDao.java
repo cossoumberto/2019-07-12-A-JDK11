@@ -106,7 +106,7 @@ public class FoodDao {
 					"FROM (SELECT food_code, COUNT(portion_id) AS C " +
 							"FROM porzioni " +
 							"GROUP BY food_code) AS T " +
-					"WHERE T.C <= ? ";
+					"WHERE T.C <= ? "; //GIUSTO!--> POTEVO USARE HAVING DOPO LA GROUP BY
 		List<Food> list = new ArrayList<>();
 		try {
 			Connection conn = DBConnect.getConnection();
