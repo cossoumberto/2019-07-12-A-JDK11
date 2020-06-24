@@ -137,6 +137,8 @@ public class FoodDao {
 					"AND FC1.condiment_code=FC2.condiment_code AND FC1.food_code>FC2.food_code AND FC1.condiment_code=C.condiment_code " +
 					"AND T1.food_code=FC1.food_code AND T2.food_code=FC2.food_code " +
 					"GROUP BY FC1.food_code, FC2.food_code";
+		//NELLE POSSIBILI SOLUZIONI PROPOSTE IL CONTROLLO DELLE PORTION VIENE FATTO IN ECLIPSE
+		//COMUNQUE GIUSTO COSI'
 		List<CoppiaFood> list = new ArrayList<>();
 		try {
 			Connection conn = DBConnect.getConnection();

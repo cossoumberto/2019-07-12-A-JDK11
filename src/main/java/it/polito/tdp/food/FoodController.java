@@ -62,6 +62,7 @@ public class FoodController {
     	}
     	if(portion!=null) {
     		model.creaGrafo(portion);
+    		boxFood.getItems().clear();//CORREZIONE
     		boxFood.getItems().addAll(model.getGrafo().vertexSet()); //TENDINA NON ORDINATA
     		txtResult.appendText("Grafo creato con " + model.getGrafo().vertexSet().size() + " vertici e " 
     				+ model.getGrafo().edgeSet().size() + " archi");
